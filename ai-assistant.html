@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Soil Assistant - SoilWise 🌱</title>
+  <meta name="description" content="Talk to SoilMitra, your AI farming expert. Upload a soil photo or ask farming questions for instant advice.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header & Sticky Navbar -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo" id="nav-logo">
+        <span>🌱</span> SoilWise
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" id="nav-home">Home</a></li>
+        <li><a href="soil-types.html" id="nav-soils">Soil Types</a></li>
+        <li><a href="crops.html" id="nav-crops">Crops</a></li>
+        <li><a href="ai-assistant.html" id="nav-assistant">AI Assistant</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger-menu" aria-label="Toggle Navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Sidebar Menu -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  <aside class="sidebar" id="sidebar-menu">
+    <ul class="sidebar-links">
+      <li><a href="index.html" id="side-home">Home</a></li>
+      <li><a href="soil-types.html" id="side-soils">Soil Types</a></li>
+      <li><a href="crops.html" id="side-crops">Crops</a></li>
+      <li><a href="ai-assistant.html" id="side-assistant">AI Assistant</a></li>
+    </ul>
+  </aside>
+
+  <!-- Hidden File Inputs -->
+  <input type="file" id="camera-input" capture="environment" accept="image/*" style="display: none;">
+  <input type="file" id="gallery-input" accept="image/*" style="display: none;">
+
+  <!-- Main Chat Container -->
+  <main class="container">
+    <div class="assistant-layout">
+      
+      <!-- Top header area inside the layout -->
+      <div class="assistant-header animate-fade-in">
+        <div class="assistant-title-area">
+          <h1>🤖 AI Soil Assistant</h1>
+          <p class="assistant-subtitle">Upload soil photo or ask farming questions to SoilMitra</p>
+        </div>
+        <div class="assistant-controls">
+          <button class="btn-clear-chat" id="clear-chat-btn" title="Clear chat history">Clear Chat</button>
+        </div>
+      </div>
+
+      <!-- Chat Room Container -->
+      <div class="chat-container animate-fade-in" style="animation-delay: 0.1s;">
+        
+        <!-- Chat message bubbles -->
+        <div class="chat-history" id="chat-history">
+          <!-- Filled dynamically by JavaScript -->
+        </div>
+
+        <!-- Image upload preview area (appears above typing input) -->
+        <div class="preview-thumbnail-container" id="preview-thumbnail-container">
+          <div class="preview-image-wrapper">
+            <img src="" alt="Selected soil image preview" id="preview-image-element" class="preview-image">
+            <button class="btn-remove-preview" id="remove-preview-btn" aria-label="Remove image">&times;</button>
+          </div>
+          <span class="preview-text">Soil photo ready to analyze</span>
+        </div>
+
+        <!-- Text/Action input panel at bottom -->
+        <div class="chat-input-bar">
+          <div class="image-upload-btns">
+            <button class="icon-upload-btn" id="camera-btn" title="Take a photo with camera" aria-label="Camera upload">📷</button>
+            <button class="icon-upload-btn" id="gallery-btn" title="Choose from gallery" aria-label="Gallery upload">🖼️</button>
+          </div>
+          
+          <input type="text" id="chat-message-input" class="chat-textarea" placeholder="Type a message or upload photo..." autocomplete="off">
+          
+          <button class="btn-send" id="send-msg-btn" aria-label="Send message">📤</button>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p class="footer-text">Made with ❤️ for Indian Farmers | SoilWise 2024</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="ai-assistant.js"></script>
+</body>
+</html>

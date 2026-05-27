@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crop Growing Guide 🌾 - SoilWise</title>
+  <meta name="description" content="Discover which crops grow best in what soil. Search and filter through cereals, pulses, commercial, and plantation crops in India.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header & Sticky Navbar -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo" id="nav-logo">
+        <span>🌱</span> SoilWise
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" id="nav-home">Home</a></li>
+        <li><a href="soil-types.html" id="nav-soils">Soil Types</a></li>
+        <li><a href="crops.html" id="nav-crops">Crops</a></li>
+        <li><a href="ai-assistant.html" id="nav-assistant">AI Assistant</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger-menu" aria-label="Toggle Navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Sidebar Menu -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  <aside class="sidebar" id="sidebar-menu">
+    <ul class="sidebar-links">
+      <li><a href="index.html" id="side-home">Home</a></li>
+      <li><a href="soil-types.html" id="side-soils">Soil Types</a></li>
+      <li><a href="crops.html" id="side-crops">Crops</a></li>
+      <li><a href="ai-assistant.html" id="side-assistant">AI Assistant</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section class="animate-fade-in">
+      <h1 style="text-align: center; margin-top: 1rem;">Crop Growing Guide</h1>
+      
+      <!-- Search & Filters -->
+      <div class="crop-controls-container">
+        <div class="search-bar-wrapper">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="crop-search" class="search-input" placeholder="Search by crop name, soil type, or state...">
+        </div>
+        
+        <div class="filter-buttons" id="filter-buttons">
+          <button class="filter-btn active" data-category="all" id="filter-all">All</button>
+          <button class="filter-btn" data-category="cereals" id="filter-cereals">Cereals</button>
+          <button class="filter-btn" data-category="pulses" id="filter-pulses">Pulses</button>
+          <button class="filter-btn" data-category="commercial" id="filter-commercial">Commercial</button>
+          <button class="filter-btn" data-category="fruits-plantation" id="filter-fruits">Fruits & Plantation</button>
+        </div>
+      </div>
+      
+      <!-- Crop Cards Grid -->
+      <div id="crops-grid" class="grid-3">
+        <!-- Rendered dynamically via crops.js -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p class="footer-text">Made with ❤️ for Indian Farmers | SoilWise 2024</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="crops.js"></script>
+</body>
+</html>

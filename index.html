@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoilWise 🌱 - Know Your Soil, Grow Your Future</title>
+  <meta name="description" content="Free soil and crop guidance for Indian farmers. Learn about soil types, find best crops, and get instant AI recommendations.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header & Sticky Navbar -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo" id="nav-logo">
+        <span>🌱</span> SoilWise
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" id="nav-home">Home</a></li>
+        <li><a href="soil-types.html" id="nav-soils">Soil Types</a></li>
+        <li><a href="crops.html" id="nav-crops">Crops</a></li>
+        <li><a href="ai-assistant.html" id="nav-assistant">AI Assistant</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger-menu" aria-label="Toggle Navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Sidebar Menu -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  <aside class="sidebar" id="sidebar-menu">
+    <ul class="sidebar-links">
+      <li><a href="index.html" id="side-home">Home</a></li>
+      <li><a href="soil-types.html" id="side-soils">Soil Types</a></li>
+      <li><a href="crops.html" id="side-crops">Crops</a></li>
+      <li><a href="ai-assistant.html" id="side-assistant">AI Assistant</a></li>
+    </ul>
+  </aside>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container animate-fade-in">
+      <h1 class="hero-title">SoilWise 🌱</h1>
+      <p class="hero-tagline">Know Your Soil, Grow Your Future</p>
+      <p class="hero-subtitle">Empowering Indian farmers with free, scientific soil guidance, crop matching, and instant AI-driven soil health analysis.</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
+        <a href="ai-assistant.html" class="btn btn-primary" id="hero-ai-btn">Try AI Assistant 🤖</a>
+        <a href="crops.html" class="btn btn-secondary" id="hero-crops-btn">Explore Crop Guide 🌾</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <main class="container">
+    <section class="features-section">
+      <h2 class="section-title">Our Smart Farming Tools</h2>
+      <div class="grid-3">
+        
+        <!-- Feature 1: Soil Types -->
+        <article class="feature-card animate-fade-in" style="animation-delay: 0.1s;">
+          <div class="feature-icon-container">🌍</div>
+          <h3>Soil Types</h3>
+          <p>Learn about the 6 major soil types found across India, their compositions, water retention rates, and local regions.</p>
+          <a href="soil-types.html" class="btn btn-olive" style="width: 100%; margin-top: auto;" id="card-soils-btn">Explore Soils</a>
+        </article>
+
+        <!-- Feature 2: Crop Guide -->
+        <article class="feature-card animate-fade-in" style="animation-delay: 0.2s;">
+          <div class="feature-icon-container">🌾</div>
+          <h3>Crop Guide</h3>
+          <p>Discover which cereals, pulses, and commercial crops thrive in specific soils, along with sowing tips and climates.</p>
+          <a href="crops.html" class="btn btn-olive" style="width: 100%; margin-top: auto;" id="card-crops-btn">Crop Growing Guide</a>
+        </article>
+
+        <!-- Feature 3: AI Assistant -->
+        <article class="feature-card animate-fade-in" style="animation-delay: 0.3s;">
+          <div class="feature-icon-container">🤖</div>
+          <h3>AI Assistant</h3>
+          <p>Upload a clear photo of your field soil or ask farming questions to get immediate diagnostic advice from SoilMitra.</p>
+          <a href="ai-assistant.html" class="btn btn-olive" style="width: 100%; margin-top: auto;" id="card-assistant-btn">Ask SoilMitra</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Why Soil Matters Section -->
+    <section class="why-soil-section animate-fade-in" style="animation-delay: 0.4s;">
+      <div class="why-soil-content">
+        <h2><span>🌱</span> Why Soil Health Matters</h2>
+        <p>
+          Soil is not just dirt; it is a living ecosystem that forms the very foundation of Indian agriculture. Healthy soil acts as a sponge that holds water during dry spells, provides essential nutrients like Nitrogen, Potash, and Phosphorus to crops, and hosts billions of beneficial microbes. Understanding your specific soil type—whether it is the moisture-rich Black Regur soil of Maharashtra or the nutrient-dense Alluvial soil of the Indo-Gangetic plains—helps you make informed decisions about fertilizer application, irrigation scheduling, and crop rotation. By planting crops that are naturally suited to your soil's profile, you can reduce production costs, conserve vital water resources, and secure higher yields for a sustainable farming future.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p class="footer-text">Made with ❤️ for Indian Farmers | SoilWise 2024</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
