@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crop Diseases Guide 🪲 - SoilWise</title>
+  <meta name="description" content="Learn about common crop diseases in India, their symptoms, prevention methods, and organic/chemical treatments.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header & Sticky Navbar -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo" id="nav-logo">
+        <span>🌱</span> SoilWise
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" id="nav-home">Home</a></li>
+        <li><a href="soil-types.html" id="nav-soils">Soil Types</a></li>
+        <li><a href="crops.html" id="nav-crops">Crops</a></li>
+        <li><a href="crop-diseases.html" id="nav-diseases">Diseases</a></li>
+        <li><a href="ai-assistant.html" id="nav-assistant">AI Assistant</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger-menu" aria-label="Toggle Navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Sidebar Menu -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  <aside class="sidebar" id="sidebar-menu">
+    <ul class="sidebar-links">
+      <li><a href="index.html" id="side-home">Home</a></li>
+      <li><a href="soil-types.html" id="side-soils">Soil Types</a></li>
+      <li><a href="crops.html" id="side-crops">Crops</a></li>
+      <li><a href="crop-diseases.html" id="side-diseases">Diseases</a></li>
+      <li><a href="ai-assistant.html" id="side-assistant">AI Assistant</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section class="animate-fade-in">
+      <h1 style="text-align: center; margin-top: 1rem;">Crop Diseases & Pest Guide</h1>
+      <p class="soil-intro-text">Identify common crop diseases in India, learn their symptoms, and find practical treatments to protect your yields.</p>
+      
+      <!-- Search & Filters -->
+      <div class="crop-controls-container">
+        <div class="search-bar-wrapper">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="disease-search" class="search-input" placeholder="Search by disease name, crop, symptoms, or treatment...">
+        </div>
+        
+        <div class="filter-buttons" id="disease-filter-buttons">
+          <button class="filter-btn active" data-category="all" id="filter-all">All</button>
+          <button class="filter-btn" data-category="fungal" id="filter-fungal">Fungal</button>
+          <button class="filter-btn" data-category="bacterial" id="filter-bacterial">Bacterial</button>
+          <button class="filter-btn" data-category="viral" id="filter-viral">Viral</button>
+          <button class="filter-btn" data-category="pest" id="filter-pest">Pests & Insects</button>
+        </div>
+      </div>
+      
+      <!-- Diseases Cards Grid -->
+      <div id="diseases-grid" class="grid-3">
+        <!-- Rendered dynamically via crop-diseases.js -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Disease Details Modal Overlay -->
+  <div class="modal-overlay" id="disease-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="soil-emoji" id="modal-emoji">🪲</span>
+        <h2 id="modal-title">Rice Blast</h2>
+        <button class="modal-close-btn" id="modal-close" aria-label="Close details modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="details-grid">
+          
+          <div class="detail-item detail-item-full">
+            <div class="detail-label">🌾 Affected Crops</div>
+            <div class="badge-container" id="modal-affected-crops">
+              <!-- Crop tags dynamically created -->
+            </div>
+          </div>
+          
+          <div class="detail-item">
+            <div class="detail-label">🧬 Disease Type</div>
+            <div class="detail-value" id="modal-type">Fungal</div>
+          </div>
+          
+          <div class="detail-item">
+            <div class="detail-label">⚙️ Vector / Spread</div>
+            <div class="detail-value" id="modal-spread">Airborne spores, high humidity</div>
+          </div>
+          
+          <div class="detail-item detail-item-full terracotta-accent">
+            <div class="detail-label">🔬 Key Symptoms</div>
+            <div class="detail-value" id="modal-symptoms">Spindle-shaped lesions on leaves with grey centers and brown borders.</div>
+          </div>
+          
+          <div class="detail-item detail-item-full">
+            <div class="detail-label">🛡️ Prevention Tips</div>
+            <div class="detail-value" id="modal-prevention">Avoid excessive nitrogen fertilizers, use resistant crop varieties.</div>
+          </div>
+          
+          <div class="detail-item detail-item-full terracotta-accent">
+            <div class="detail-label">🧪 Treatment & Management</div>
+            <div style="margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <div>
+                <strong style="color: var(--color-olive-green);">Organic Options:</strong>
+                <p id="modal-organic-treatment" style="font-size: 0.9rem; color: var(--color-text-main); margin-top: 0.15rem;"></p>
+              </div>
+              <div>
+                <strong style="color: var(--color-terracotta);">Chemical Options:</strong>
+                <p id="modal-chemical-treatment" style="font-size: 0.9rem; color: var(--color-text-main); margin-top: 0.15rem;"></p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p class="footer-text">Made with ❤️ for Indian Farmers | SoilWise 2026</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="crop-diseases.js"></script>
+</body>
+</html>
