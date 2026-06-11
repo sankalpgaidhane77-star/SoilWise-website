@@ -15,11 +15,13 @@ document.addEventListener('DOMContentLoaded', () => {
   initChatHistory();
   initImageUploads();
   initChatActions();
+  initSettingsModal();
+  checkApiKeyStatus();
 });
 
-// Get Hardcoded API Key
+// Get API Key from local storage
 function getApiKey() {
-  return "AIzaSyAI1H6lOz1CTD-WldTXaf6hi7gKDEBqt2c";
+  return localStorage.getItem('soilwise_gemini_api_key') || '';
 }
 
 // Chat History Persistence
@@ -142,6 +144,13 @@ function initChatActions() {
     const mime = selectedImageMime;
 
     const apiKey = getApiKey();
+
+    if (!apiKey) {
+      alert("Please set your Google Gemini API Key in the settings first!");
+      const settingsBtn = document.getElementById('settings-btn');
+      if (settingsBtn) settingsBtn.click();
+      return;
+    }
 
     if (!text && !image) return;
 
@@ -296,7 +305,7 @@ async function callGeminiAPI(apiKey, userText, base64ImageWithPrefix, mimeType) 
 
     // Throw descriptive error if API key is invalid
     if (response.status === 400 || response.status === 403) {
-      throw new Error("Invalid API Key or permission error. Please verify the embedded Gemini API key.");
+      throw new Error("Invalid API Key or permission error. Please click the ⚙️ settings icon to update your Google Gemini API key.");
     }
 
     throw new Error(errorData.error?.message || `API request failed with status ${response.status}`);
@@ -311,4 +320,92 @@ async function callGeminiAPI(apiKey, userText, base64ImageWithPrefix, mimeType) 
   }
 
   throw new Error("Empty response received from the AI model.");
+}
+
+// Check and update UI based on API key status
+function checkApiKeyStatus() {
+  const apiKey = getApiKey();
+  const warningBanner = document.getElementById('api-warning');
+  const chatInput = document.getElementById('chat-message-input');
+  const sendBtn = document.getElementById('send-msg-btn');
+  
+  if (!apiKey) {
+    if (warningBanner) warningBanner.style.display = 'flex';
+    if (chatInput) {
+      chatInput.placeholder = 'Please enter your Gemini API Key in settings to chat...';
+      chatInput.disabled = true;
+    }
+    if (sendBtn) {
+      sendBtn.disabled = true;
+      sendBtn.style.opacity = '0.5';
+      sendBtn.style.cursor = 'not-allowed';
+    }
+  } else {
+    if (warningBanner) warningBanner.style.display = 'none';
+    if (chatInput) {
+      chatInput.placeholder = 'Type a message or upload photo...';
+      chatInput.disabled = false;
+    }
+    if (sendBtn) {
+      sendBtn.disabled = false;
+      sendBtn.style.opacity = '1';
+      sendBtn.style.cursor = 'pointer';
+    }
+  }
+}
+
+// Initialize settings modal functionality
+function initSettingsModal() {
+  const settingsBtn = document.getElementById('settings-btn');
+  const setupKeyBtn = document.getElementById('setup-key-btn');
+  const settingsModal = document.getElementById('settings-modal');
+  const closeSettingsBtn = document.getElementById('close-settings-btn');
+  const cancelSettingsBtn = document.getElementById('cancel-settings-btn');
+  const saveSettingsBtn = document.getElementById('save-settings-btn');
+  const apiKeyInput = document.getElementById('api-key-input');
+
+  const openModal = () => {
+    if (apiKeyInput) {
+      apiKeyInput.value = getApiKey();
+    }
+    if (settingsModal) {
+      settingsModal.classList.add('active');
+    }
+  };
+
+  const closeModal = () => {
+    if (settingsModal) {
+      settingsModal.classList.remove('active');
+    }
+  };
+
+  if (settingsBtn) settingsBtn.addEventListener('click', openModal);
+  if (setupKeyBtn) setupKeyBtn.addEventListener('click', openModal);
+  if (closeSettingsBtn) closeSettingsBtn.addEventListener('click', closeModal);
+  if (cancelSettingsBtn) cancelSettingsBtn.addEventListener('click', closeModal);
+
+  // Close modal when clicking outside of the content box
+  if (settingsModal) {
+    settingsModal.addEventListener('click', (e) => {
+      if (e.target === settingsModal) {
+        closeModal();
+      }
+    });
+  }
+
+  // Handle escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && settingsModal && settingsModal.classList.contains('active')) {
+      closeModal();
+    }
+  });
+
+  if (saveSettingsBtn && apiKeyInput) {
+    saveSettingsBtn.addEventListener('click', () => {
+      const key = apiKeyInput.value.trim();
+      localStorage.setItem('soilwise_gemini_api_key', key);
+      closeModal();
+      checkApiKeyStatus();
+    });
+  }
 }
