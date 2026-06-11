@@ -55,8 +55,15 @@
           <p class="assistant-subtitle">Upload soil photo or ask farming questions to SoilMitra</p>
         </div>
         <div class="assistant-controls">
+          <button class="btn-settings" id="settings-btn" title="API Key Settings">⚙️</button>
           <button class="btn-clear-chat" id="clear-chat-btn" title="Clear chat history">Clear Chat</button>
         </div>
+      </div>
+
+      <!-- API Warning Banner (shows if key is missing) -->
+      <div class="api-warning-banner animate-fade-in" id="api-warning" style="display: none; animation-delay: 0.05s;">
+        <span>⚠️ Google Gemini API Key is required to chat with SoilMitra.</span>
+        <button id="setup-key-btn">Set API Key</button>
       </div>
 
       <!-- Chat Room Container -->
@@ -92,13 +99,31 @@
 
     </div>
   </main>
-
-
+  <!-- Settings Modal (API Key Input) -->
+  <div class="modal-overlay" id="settings-modal">
+    <div class="modal-content">
+      <header class="modal-header">
+        <h2>⚙️ API Key Settings</h2>
+        <button class="modal-close-btn" id="close-settings-btn" aria-label="Close settings modal">&times;</button>
+      </header>
+      <div class="modal-body">
+        <div class="settings-form-group">
+          <label for="api-key-input" style="font-weight: 600; color: var(--color-deep-brown); margin-bottom: 0.5rem; display: block;">Google Gemini API Key</label>
+          <input type="password" id="api-key-input" class="settings-input" placeholder="Enter your Gemini API Key (AIzaSy...)">
+          <p class="settings-help" style="margin-top: 0.5rem;">Your API key is stored locally in your browser (localStorage) and never sent anywhere else. You can get a free key from Google AI Studio.</p>
+        </div>
+        <div class="settings-actions">
+          <button class="btn btn-secondary" id="cancel-settings-btn">Cancel</button>
+          <button class="btn btn-primary" id="save-settings-btn">Save Key</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer>
     <div class="footer-content">
-      <p class="footer-text">Made with ❤️ for Indian Farmers | SoilWise 2024</p>
+      <p class="footer-text">Made with ❤️ for Indian Farmers | SoilWise 2026</p>
     </div>
   </footer>
 
