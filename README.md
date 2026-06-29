@@ -1,361 +1,318 @@
-# 💧 AquaShield AI
+````markdown
+# 🌱 SoilMitra AI
 
 <p align="center">
-  <img src="assets/banner.png" alt="AquaShield AI Banner" width="100%">
+<img src="assets/banner.png" width="100%">
 </p>
 
-<h1 align="center">💧 AquaShield AI</h1>
+<h1 align="center">🌾 SoilMitra AI</h1>
 
 <p align="center">
-An Interactive Water Quality Monitoring & Environmental Awareness Platform
+An AI-Powered Smart Agriculture Assistant for Soil Analysis, Crop Guidance & Disease Management
 </p>
 
 <p align="center">
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Gemini API](https://img.shields.io/badge/Google-Gemini_API-4285F4?style=for-the-badge&logo=google)
 ![JSON](https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=json)
+
 </p>
 
 ---
 
-# 🌊 About
+# 🌍 About
 
-AquaShield AI is a modern frontend web application designed to promote awareness about water quality and environmental safety. It provides an interactive interface for analyzing water parameters, monitoring simulated sensor data, locating clean water sources, and reporting pollution incidents.
+**SoilMitra AI** is an intelligent web application developed to help farmers understand soil conditions, choose suitable crops, identify crop diseases, and receive AI-powered agricultural guidance.
 
-The project demonstrates how web technologies can be used to visualize water quality information in an engaging and user-friendly way.
+The platform combines educational resources with Google Gemini AI to provide interactive farming assistance in simple English and Hinglish.
 
 ---
 
 # ✨ Features
 
-## 🤖 Water Safety Analysis
+## 🏠 Smart Homepage
 
-Users can manually analyze water quality using four important parameters:
-
-- 🌡 Temperature
-- 💧 pH Level
-- 🌫 Turbidity
-- 🧂 Total Dissolved Solids (TDS)
-
-The application displays:
-
-- ✅ Safe
-- ⚠ Moderate
-- ❌ Dangerous
-
-along with helpful safety recommendations.
+- Responsive Navigation Bar
+- Mobile Sidebar Menu
+- Hero Dashboard
+- Quick Navigation Cards
+- Soil Health Awareness
+- Sustainable Farming Information
+- Responsive UI Design
 
 ---
 
-## 📊 Live Dashboard
+## 🌱 Soil Types Guide
 
-Monitor simulated environmental data through an interactive dashboard.
+Explore six major soil types of India.
 
 ### Includes
 
-- Live Sensor Readings
-- Water Quality Overview
-- Dynamic Charts
-- Historical Trends
-- Interactive Data Visualization
+- Alluvial Soil
+- Black Cotton Soil
+- Red Soil
+- Laterite Soil
+- Sandy Soil
+- Mountain & Forest Soil
+
+Each soil profile includes
+
+- Coverage
+- Properties
+- Water Retention
+- pH Information
+- Suitable Crops
+- Growing Seasons
+- Geographic Regions
+
+Interactive modal provides detailed soil information.
 
 ---
 
-## 📈 Interactive Charts
+## 🌾 Crop Growing Guide
 
-Visualize water quality through beautiful charts powered by Chart.js.
+Complete crop directory categorized into
 
-Charts include:
+- Cereals
+- Pulses
+- Commercial Crops
+- Fruits & Plantation
 
-- pH vs Temperature
+Each crop displays
 
-- Turbidity vs TDS
+- Suitable Soil
+- Climate
+- Rainfall
+- Growing States
+- Sowing Time
+- Harvesting Time
+- Farming Tips
 
-- Seven-Day Water Quality Trends
+Supports
 
----
-
-## 🗺 Pollution Monitoring Map
-
-Interactive map displaying
-
-- Water Monitoring Points
-
-- Pollution Markers
-
-- Sensor Locations
-
-- Pollution Heatmap
-
----
-
-## 📍 Clean Water Locator
-
-Find clean water resources including
-
-- Verified Drinking Water Sources
-
-- Water Testing Centers
-
-- Interactive Navigation
-
-- Live Water Information
+- Live Search
+- Category Filters
+- Instant Results
 
 ---
 
-## 🚨 Community Hazard Reporting
+## 🦠 Crop Disease Guide
 
-Users can report environmental issues such as
+Learn about common crop diseases including
 
-- Industrial Pollution
+- Rice Blast
+- Late Blight
+- Citrus Canker
+- White Grub
+- Stem Borer
 
-- Oil Spill
+Every disease contains
 
-- Sewage Leakage
+- Symptoms
+- Prevention
+- Organic Treatment
+- Chemical Treatment
+- Spread Information
 
-- Algal Bloom
+Search functionality and detailed popup windows make disease identification easier.
 
-- Dirty Water Supply
+---
 
-- High Turbidity
+## 🤖 SoilMitra AI Assistant
+
+Powered by Google Gemini API.
 
 Features
 
-- Map Pin Selection
-
-- Current Location Support
-
-- Photo Upload
-
-- Report Submission
-
----
-
-# 🛠 Technology Stack
-
-| Technology | Purpose |
-|------------|----------|
-| HTML5 | Page Structure |
-| CSS3 | Styling & Responsive Design |
-| JavaScript (ES6) | Application Logic |
-| JSON | Water Sample & Sensor Data |
+- AI Chat Assistant
+- Hinglish Support
+- Simple Farmer-Friendly Language
+- Soil Image Analysis
+- Crop Recommendations
+- Soil Improvement Tips
+- Typing Indicator
+- Image Preview
+- Chat History
+- Clear Chat Button
 
 ---
 
-# 📂 Folder Structure
+## 📷 Soil Photo Analysis
+
+Farmers can upload
+
+- Camera Images
+- Gallery Images
+
+The AI analyzes
+
+- Soil Color
+- Soil Texture
+- Possible Soil Type
+- Recommended Crops
+- Improvement Suggestions
+
+---
+
+## 🔑 Secure API Key Management
+
+- Gemini API Key Storage
+- Local Storage Support
+- Missing API Warnings
+- Secure Client-side Configuration
+
+---
+
+## 💾 Local Storage Features
+
+The application stores
+
+- Chat History
+- API Key
+- User Preferences
+
+No external database is required.
+
+---
+
+# 🛠 Tech Stack
+
+| Category | Technology |
+|-----------|------------|
+| Frontend | HTML5, CSS3, JavaScript |
+| Backend/API | Google Gemini API |
+| Data | JSON |
+| Storage | Browser Local Storage |
+| UI | Responsive Design |
+
+---
+
+# 📂 Project Structure
 
 ```
-
-AquaShield-AI/
+SoilMitra-AI/
 
 │
 
 ├── assets/
 
-│ ├── images/
-
-│ ├── icons/
-
-│ └── styles/
-
-│
-
 ├── css/
-
-│ └── style.css
-
-│
 
 ├── js/
 
-│ ├── app.js
-
-│ ├── dashboard.js
-
-│ ├── locator.js
-
-│ └── report.js
-
-│
-
 ├── data/
 
-│ └── water-data.json
-
-│
+├── images/
 
 ├── index.html
 
-│
+├── soil-types.html
+
+├── crops.html
+
+├── crop-diseases.html
+
+├── ai-assistant.html
 
 └── README.md
-
 ```
 
 ---
 
 # 📸 Screenshots
 
-## Home Page
+## Home
 
 ![Home](assets/home.png)
 
----
+## Soil Guide
 
-## Water Prediction
+![Soil](assets/soil.png)
 
-![Prediction](assets/prediction.png)
+## Crop Guide
 
----
+![Crop](assets/crop.png)
 
-## Dashboard
+## Disease Guide
 
-![Dashboard](assets/dashboard.png)
+![Disease](assets/disease.png)
 
----
+## AI Assistant
 
-## Clean Water Locator
+![AI](assets/assistant.png)
 
-![Locator](assets/locator.png)
-
----
-
-## Community Reporting
-
-![Report](assets/report.png)
-
----
-
-> Replace the above placeholder images with actual project screenshots.
-
----
-
-# 🎥 Demo
-
-Add your project demo GIF or screen recording here.
-
-```
-
-assets/demo.gif
-
-```
+Replace these placeholder images with actual screenshots.
 
 ---
 
 # 🚀 Getting Started
 
-## Clone Repository
+Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/AquaShield-AI.git
+git clone https://github.com/yourusername/SoilMitra-AI.git
 ```
 
----
+Open the project folder.
 
-## Open Project
-
-Simply open
+Launch
 
 ```
 index.html
 ```
 
-in your preferred web browser.
+in your browser.
 
-No installation is required.
+For AI Assistant
 
----
-
-# 💡 How It Works
-
-1. Open the application.
-
-2. Enter water parameters.
-
-3. Analyze the sample.
-
-4. View results.
-
-5. Explore dashboard analytics.
-
-6. Locate clean water sources.
-
-7. Report pollution incidents.
+1. Generate a Gemini API Key.
+2. Enter the key in the application.
+3. Start chatting with SoilMitra AI.
 
 ---
 
-# 🌍 Future Improvements
+# 🌟 Future Improvements
 
-- Live API Integration
-
-- Real IoT Sensor Support
-
-- GPS Navigation
-
-- User Authentication
-
-- Cloud Database
-
+- Voice Chat
+- Multi-language Support
+- Weather Forecast Integration
+- Government Agriculture Schemes
+- Fertilizer Recommendation
+- Offline Mode
+- Disease Detection using AI Models
 - Mobile Application
-
-- Dark Mode
-
-- Offline Support
-
----
-
-# 🤝 Contributing
-
-Contributions are welcome!
-
-1. Fork the repository
-
-2. Create your feature branch
-
-3. Commit your changes
-
-4. Push your branch
-
-5. Open a Pull Request
 
 ---
 
 # 📄 License
 
-This project is licensed under the MIT License.
+Licensed under the MIT License.
 
 ---
 
 # 👨‍💻 Developer
 
-**Your Name**
+Your Name
 
-GitHub: https://github.com/yourusername
+GitHub:
+https://github.com/yourusername
 
-LinkedIn: https://linkedin.com/in/yourprofile
+LinkedIn:
+https://linkedin.com/in/yourprofile
 
-Email: your@email.com
-
----
-
-# ⭐ Support
-
-If you like this project,
-
-⭐ Star this repository
-
-🍴 Fork the repository
-
-📢 Share it with your friends
+Email:
+your@email.com
 
 ---
 
 <p align="center">
 
-### 💙 Clean Water • Smart Technology • Better Future
+🌾 Empowering Farmers with AI & Smart Agriculture 🌱
 
-Made with ❤️ using HTML, CSS & JavaScript.
+⭐ Star this repository if you found it useful!
 
 </p>
+````
